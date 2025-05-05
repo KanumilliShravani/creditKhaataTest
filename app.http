@@ -1,0 +1,68 @@
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+    "username": "Raju",
+    "email": "raju88@gmail.com",
+    "password": "raju@123"
+}
+
+### 
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "raju88@gmail.com",
+    "password": "raju@123"
+}
+
+###
+
+POST http://localhost:3000/creditKhaata/customer
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhanU4OEBnbWFpbC5jb20iLCJpYXQiOjE3NDY0MjA0NjR9.75w72qTD1yAAvEBsOwBB3urxcupuV0ubgvefp5HuCOQ
+
+{
+    "name": "Ram",
+    "trustScore": "4",
+    "phone": "9933555634",
+    "address": "Kolkata",
+    "creditLimit": 20000
+}
+
+### 
+
+GET http://localhost:3000/creditKhaata/customer
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhanU4OEBnbWFpbC5jb20iLCJpYXQiOjE3NDY0MjA0NjR9.75w72qTD1yAAvEBsOwBB3urxcupuV0ubgvefp5HuCOQ
+
+###
+
+DELETE http://localhost:3000/creditKhaata/customer/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhanU4OEBnbWFpbC5jb20iLCJpYXQiOjE3NDY0MjA0NjR9.75w72qTD1yAAvEBsOwBB3urxcupuV0ubgvefp5HuCOQ
+
+#### 
+
+PUT http://localhost:3000/creditKhaata/customer/2
+Content-Type:application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJhanU4OEBnbWFpbC5jb20iLCJpYXQiOjE3NDY0MjA0NjR9.75w72qTD1yAAvEBsOwBB3urxcupuV0ubgvefp5HuCOQ
+
+{
+  "address": "Ranchi"
+}
+
+###
+
+POST http://localhost:3000/creditKhaata/loan 
+Content-Type: application/json 
+
+{
+    "customerId": 2,
+    "itemDescription": "Two NPK bags",
+    "loanAmount": 2500,
+    "issueDate": "2020-03-02",
+    "dueDate": "2020-04-02",
+    "frequency":"monthly",
+    "loanStatus":"paid"
+}
+
